@@ -1,0 +1,30 @@
+.search-box{
+    border: 1px solid rgba(195, 212, 233, 0.4);
+    border-radius: 70px;
+    padding: 10px 24px;
+    box-sizing: border-box;
+    color: #596780;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+
+}
+.search-icon{
+    font-size: 20px;
+}
+.search-box input{
+    border: none;
+    outline: none;
+    width: calc(100% - 70px);
+    font-size: 14px;
+    font-family: "PlusJakartaSansBold"!important;
+}
+@media (max-width: 990px) {
+    .search-box{
+        margin-top: 30px;
+        width: 100%;
+    
+    }
+}

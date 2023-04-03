@@ -1,0 +1,29 @@
+.page-holder{
+    padding-top: 34px;
+}
+.ad-img{
+    border-radius: 10px;
+}
+.btn-arrow{
+    background-color: #3563E9;
+    border-radius: 10px;
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+}
+.arrow{
+    color: #fff;
+    font-size: 20px;
+}
+.btn-more{
+    max-width: 180px;
+    margin: 50px auto;
+}
+@media (max-width: 1200px) { 
+    .filter-holder{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,64 @@
+.card-box{
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 320px;
+    width: 100%;
+    margin: 15px 0;
+}
+.text-mute{
+    color: #90A3BF!important;
+    cursor: pointer;
+}
+.text-red{
+    color: #ED3F3F;
+}
+.label{
+    font-size: 14px;
+}
+.card-box img{
+    width: 100%;
+    object-fit: contain;
+}
+.icon{
+    font-size: 20px;
+    margin-right: 5px;
+    display: inline-block;
+}
+.car-feature{
+    font-size: 14px;
+}
+.cost{
+    font-weight: bold;
+}
+.cost span{
+    font-size: 12px;
+    font-weight: normal;
+}
+.car-feature-holder{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (max-width: 576px) {
+    .card-box{
+        width: 100%;
+        max-width: 100%;
+    }
+    .card-info{
+        display: flex;
+    }
+    .card-box img{
+        width: calc(100% - 85px);
+    }
+    .car-feature-holder{
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    .car-feature{
+        margin: 8px 0;
+    }
+ 
+}

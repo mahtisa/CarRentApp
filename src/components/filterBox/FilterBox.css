@@ -1,0 +1,77 @@
+.filter-box{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 24px 32px;
+    box-sizing: border-box;
+    color: #1A202C;
+    margin: 0 auto;
+}
+
+.filter-item{
+    border-right: solid 1px #C3D4E9;
+    padding-right: 25px;
+}
+.filter-item:last-child{
+    border-right: none;
+}
+.filter-selector{
+    border: none;
+    outline: none;
+    color: #90A3BF;
+    font-size: 12px;
+    padding-right: 8px;
+}
+.filter-item-title{
+    padding-left: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.react-datepicker__input-container input{
+    border: none!important;
+    outline: none!important;
+    font-family: "PlusJakartaSansMedium";
+    color: #90A3BF!important;
+
+}
+.react-datepicker-ignore-onclickoutside{
+    border: none!important;
+    outline: none!important;
+    font-size: 12px!important;
+    padding-right: 8px!important;
+    width: 100%!important;
+    font-family: "PlusJakartaSansMedium";
+
+}
+.react-datepicker-wrapper{
+    font-size: 12px!important;
+    font-family: "PlusJakartaSansMedium";
+}
+@media (max-width: 1200px) { 
+    .filter-box{
+        width: 100%;
+    }
+    .btn-arrow {
+        position: relative;
+        top: -10px;
+    }
+    .filter-down{
+        margin-top: -20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .filter-item{
+        padding: 5px;
+    }
+    .filter-box {
+        padding: 15px;
+    }
+ 
+}
+@media (max-width: 430px) {
+    .filter-selector {
+        font-size: 10px;
+        padding-right: 0px;
+    }
+ 
+}

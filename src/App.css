@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: "PlusJakartaSansBold";
+    src: local("PlusJakartaSansBold"),
+     url("./fonts/PlusJakartaSans-Bold.ttf") format("truetype");
+    font-weight: bolder;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "PlusJakartaSansMedium";
+  src: local("PlusJakartaSansMedium"),
+   url("./fonts/PlusJakartaSans-Medium.ttf") format("truetype");
+  font-weight: normal;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "PlusJakartaSansSemiBold";
+  src: local("PlusJakartaSansSemiBold"),
+   url("./fonts/PlusJakartaSans-SemiBold.ttf") format("truetype");
+  font-weight: bold;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+    font-family: "PlusJakartaSansMedium"!important;
+    background-color: #F6F7F9!important;
+    font-size: 16px;
+}
+ul{
+  padding: 0!important;
+  margin: 0!important;
+}
+li{
+  list-style: none;
+}
+.btn-blue{
+  background: #3563E9;
+  border-radius: 4px; 
+  color: #fff;
+  font-size: 16px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 45px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo{
+  color: #3563E9;
+  font-weight: bolder;
+  font-size: 32px;
 }
