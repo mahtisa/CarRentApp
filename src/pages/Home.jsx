@@ -1,6 +1,7 @@
 import "./Pages.css";
 
 import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 
 import { BsArrowDownUp } from "react-icons/bs";
 import CarBoxHolder from "../components/carBoxHolder/CarBoxHolder";
@@ -10,14 +11,39 @@ import PopularCarHolderRes from "../components/carBoxHolder/PopularCarHolderRes"
 import ad1 from "../images/ad1.png";
 import ad2 from "../images/ad2.png";
 import carsFetch from "../redux/cars/carsActions";
-import { useEffect } from "react";
 
+const filterCars = (data, start, end) => {
+  const allCars = [...data];
+  return allCars.filter((car) => {
+    return (
+      car.location.includes(start.startCity) &&
+      (car.date.start === start.startDate || car.date.end === end.endDate) &&
+      (car.time.start === start.startTime || car.time.end === end.endTime)
+    );
+  });
+};
 const Home = () => {
+  const [startCity, setStartCity] = useState("");
+  const [endCity, setEndCity] = useState("");
+  const [startTime, setStartTime] = useState("");
+  const [endTime, setEndTime] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
+
   const { loading, error, data } = useSelector((state) => state.cars);
+  const [filterData,setFilterData] = useState([]);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(carsFetch());
   }, []);
+  const clickHandler = () => {
+      const filter = filterCars(
+      data,
+      { startCity, startDate, startTime },
+      { endCity, endDate, endTime }
+    );
+    setFilterData(filter)
+  };
   return (
     <div className="page-holder">
       <section>
@@ -35,14 +61,35 @@ const Home = () => {
       <section>
         <div className="container-man">
           <div className="d-flex justify-content-between align-items-center filter-holder">
-            <FilterBox data={data}/>
+            <FilterBox
+              data={data}
+              title="Pick-Up"
+              setCity={setStartCity}
+              setTime={setStartTime}
+              setDate={setStartDate}
+            />
             <div className="btn-arrow">
-              <BsArrowDownUp className="arrow" />
+              <BsArrowDownUp className="arrow" onClick={clickHandler} />
             </div>
-            <FilterBox marginTop="filter-down" data={data} />
+            <FilterBox
+              marginTop="filter-down"
+              data={data}
+              title="Drop-Off"
+              setCity={setEndCity}
+              setTime={setEndTime}
+              setDate={setEndDate}
+            />
           </div>
         </div>
       </section>
+      {
+      filterData.length > 0 ? (
+        <section className="recomendation">
+          <CarBoxHolder cars={filterData} title="Results" />
+        </section>
+      ) : (
+        <section></section>
+      )}
       <section id="popular-car" className="d-xl-block d-none">
         <PopularCarHolder cars={data} />
       </section>
@@ -50,7 +97,7 @@ const Home = () => {
         <PopularCarHolderRes cars={data} />
       </section>
       <section className="recomendation">
-        <CarBoxHolder cars={data} />
+        <CarBoxHolder cars={data} title="Recomendation Car" />
       </section>
     </div>
   );

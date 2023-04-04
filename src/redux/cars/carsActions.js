@@ -1,4 +1,4 @@
-import { ADD_LIKE, FETCH_CARS_FAILUR, FETCH_CARS_REQUEST, FETCH_CARS_SUCCESS } from "./carsType"
+import { ADD_LIKE, FETCH_CARS_FAILUR, FETCH_CARS_REQUEST, FETCH_CARS_SUCCESS, FILTER_CAR } from "./carsType"
 
 import axios from "axios"
 
@@ -36,4 +36,5 @@ const carsFetch = (dispatch)=>{
         
     }
 }
+
 export default carsFetch;
