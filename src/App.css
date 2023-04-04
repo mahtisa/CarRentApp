@@ -20,6 +20,7 @@ body{
     font-family: "PlusJakartaSansMedium"!important;
     background-color: #F6F7F9!important;
     font-size: 16px;
+    color: #596780!important;
 }
 ul{
   padding: 0!important;
@@ -45,4 +46,57 @@ li{
   color: #3563E9;
   font-weight: bolder;
   font-size: 32px;
+}
+.text-mute{
+  color: #90A3BF!important;
+  cursor: pointer;
+}
+.text-red{
+  color: #ED3F3F;
+}
+.label{
+  font-size: 14px;
+}
+.check-box{
+    -webkit-appearance: none;
+    appearance: none;
+    width:20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid #90A3BF;
+    outline: none;
+    cursor: pointer;
+}
+.check-box-checked{
+  width:20px;
+    height: 20px;
+}
+
+.single-thumb .range-slider__thumb[data-lower] {
+  width: 0;
+}
+.single-thumb .range-slider__range {
+  border-radius: 10px;
+}
+
+.range-slider__thumb {
+  width: 20px;
+  height: 20px;
+  background: #3563E9!important;
+  border: solid 4px #fff!Important;
+}
+.range-slider .range-slider__range {
+  background: #3563E9!important;
+}
+.range-slider .range-slider__thumb[data-disabled] {
+  display: none!important;
+}
+.range-slider{
+  height: 12px!important;
+  border-radius: 10px!important;
+  background: #90A3BF!important;
+}
+.card-box{
+    color: #1A202C!important;
+    font-weight: bold;
 }

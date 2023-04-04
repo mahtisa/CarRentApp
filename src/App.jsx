@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import { Provider, useDispatch, useSelector } from 'react-redux';
 import {Route, Routes} from "react-router-dom"
 
+import Category from './pages/Category';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import Home from './pages/Home';
@@ -21,6 +22,7 @@ function App() {
           <Header/>
           <Routes>
             <Route path='/' element={<Home/>}/>
+            <Route path='category' element={<Category/>}/>
           </Routes>
           <Footer/>
         </div>

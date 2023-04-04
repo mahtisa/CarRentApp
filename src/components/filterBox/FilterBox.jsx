@@ -2,9 +2,6 @@ import "./FilterBox.css";
 import "react-datepicker/dist/react-datepicker.css";
 
 import DatePicker from "react-datepicker";
-import { carFilter } from "../../redux/cars/carsActions";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
 import { useState } from "react";
 
 const getTime = (date) => {

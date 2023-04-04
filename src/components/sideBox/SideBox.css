@@ -1,0 +1,9 @@
+.side-box{
+    width: 350px;
+    height: 100vh;
+    background-color: #fff;
+    padding: 32px;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+}

@@ -62,7 +62,7 @@ const PopularCarHolderRes = ({ cars }) => {
       <div className="container-man">
         <div className="d-flex justify-content-between align-items-center mt-5 mb-3 mx-3">
           <span className="text-mute">Popular Car</span>
-          <NavLink to={"#"}>View All</NavLink>
+          <NavLink to={"category"}>View All</NavLink>
         </div>
         <div className="row">
           <swiper-container init="false">

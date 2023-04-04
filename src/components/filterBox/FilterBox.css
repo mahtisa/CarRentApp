@@ -31,7 +31,7 @@
     outline: none!important;
     font-family: "PlusJakartaSansMedium";
     color: #90A3BF!important;
-
+    width: 100%;
 }
 .react-datepicker-ignore-onclickoutside{
     border: none!important;

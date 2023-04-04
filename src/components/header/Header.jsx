@@ -13,7 +13,7 @@ const Header = () => {
             <div className="container-man">
                 <div className="row d-flex align-items-center">
                     <div className="col-lg-2 col-6">
-                        <NavLink to={'home'}><div className="logo">MORENT</div></NavLink>
+                        <NavLink to={'/'}><div className="logo">MORENT</div></NavLink>
                     </div>
                     <div className="col-6 d-lg-none d-flex justify-content-end">
                         <img src={profile} alt="profile pic" className="profile-pic"/>
