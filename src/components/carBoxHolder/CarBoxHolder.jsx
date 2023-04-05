@@ -13,7 +13,7 @@ const CarBoxHolder = ({ cars, title }) => {
           {title === ""
             ? cars.map((car) => {
                 return (
-                  <div className="col-xl-4 col-6" key={car.id}>
+                  <div className="col-xl-4 col-sm-6" key={car.id}>
                     <CardBox car={car} />
                   </div>
                 );

@@ -1,9 +1,9 @@
 import {
   ADD_LIKE,
+  CARS_FILTER,
   FETCH_CARS_FAILUR,
   FETCH_CARS_REQUEST,
   FETCH_CARS_SUCCESS,
-  FILTER_CAR,
 } from "./carsType";
 
 const initialState = {
@@ -26,6 +26,20 @@ const carReducer = (state = initialState, actions) => {
       );
       newData[index].likeCount++;
       return { loading: false, error: "", data: newData };
+    case CARS_FILTER:
+      const allData = [...state.data];
+      let filterCars = []
+      if(actions.payload.filterItemType === "type"){
+         filterCars = allData.filter(c => c.type === actions.payload.filterItems);
+      }else if(actions.payload.filterItemType === "capacity"){
+        filterCars = allData.filter(c => c.feature.capacity === actions.payload.filterItems);
+      }else{
+        filterCars = allData.filter(c =>  c.price <= actions.payload.filterItems[1])
+        if(filterCars.length === 0){
+          filterCars = allData;
+        }
+      }
+      return { loading: false, error: "", data: filterCars }
     default:
       return state;
   }

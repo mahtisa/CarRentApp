@@ -1,4 +1,4 @@
-import { ADD_LIKE, FETCH_CARS_FAILUR, FETCH_CARS_REQUEST, FETCH_CARS_SUCCESS, FILTER_CAR } from "./carsType"
+import { ADD_LIKE, CARS_FILTER, FETCH_CARS_FAILUR, FETCH_CARS_REQUEST, FETCH_CARS_SUCCESS, FILTER_CAR } from "./carsType"
 
 import axios from "axios"
 
@@ -34,6 +34,12 @@ const carsFetch = (dispatch)=>{
             dispatch(fetchCarsFailur(error.message));
         })
         
+    }
+}
+export const carsFilter = (filterItem)=>{
+    return{
+        type: CARS_FILTER,
+        payload : filterItem
     }
 }
 

@@ -34,14 +34,50 @@
     border-radius: 90px;
     object-fit: cover;
 }
+.filter-btn{
+    display: none;
+}
+.btn-filter{
+    display: none;
+    width: 45px;
+    border: solid 1px rgba(195, 212, 233, 0.4);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    margin-left: 16px;
+    cursor: pointer;
+}
+.cover{
+    width: 0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 998;
+    transition: 1s;
+}
 @media (max-width: 990px) {
     .header{
         padding: 30px 0;
         border-bottom: none;
     }
+    .search-holder{
+        margin-top: 30px;
+    }
 
 }
-
+@media (max-width: 930px) {
+    .filter-btn{
+        display: block;
+    }
+    .search-holder{
+        display: flex;
+        align-items: center;
+    }
+    .btn-filter{
+        display: flex;
+    }
+}
 @media (max-width: 768px) { 
     .profile-pic{
         width: 30px;

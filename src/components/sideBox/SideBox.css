@@ -1,9 +1,29 @@
-.side-box{
-    width: 350px;
+.side-box ,.nav-box-holder{
+    width: 300px;
     height: 100vh;
     background-color: #fff;
     padding: 32px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: 1s;
+}
+.side-box{
     position: sticky;
     top: 0;
     bottom: 0;
+}
+.nav-box{
+    width: 100%
+}
+.nav-box-holder{
+    width: 280px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -280px;
+    z-index: 999;
+}
+@media (max-width: 930px) {
+    .side-box{
+        display: none;
+    }
 }
