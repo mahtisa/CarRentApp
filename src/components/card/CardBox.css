@@ -32,6 +32,11 @@
     align-items: center;
     justify-content: space-between;
 }
+.cost-off{
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 8px;
+}
 @media (max-width: 576px) {
     .card-box{
         width: 100%;

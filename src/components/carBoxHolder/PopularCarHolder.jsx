@@ -2,41 +2,35 @@ import CardBox from "../card/CardBox";
 import { NavLink } from "react-router-dom";
 import ReactLoading from "react-loading";
 
-const sortCars = (data) => {
-  const sort = data.sort((a, b) => {
-    if (a.likeCount < b.likeCount) {
-      return -1;
-    } else if (a.likeCount > b.likeCount) {
-      return 1;
-    }
-    return 0;
-  });
-  return sort.reverse();
-};
-const PopularCarHolder = ({ cars }) => {
-  const allCars = [...cars];
-  const sortArray = sortCars(allCars);
-  const popularCars = [];
-  for (let i = 0; i < 4; i++) {
-    popularCars[i] = sortArray[i];
-  }
-  if (popularCars[0]) {
+const PopularCarHolder = ({ cars,title }) => {
+  if (cars[0]) {
     return (
-      <div className="container-man">
+      <>
         <div className="d-flex justify-content-between align-items-center mt-5 mb-3 mx-3">
-          <span className="text-mute">Popular Car</span>
+          <div className="text-mute">{title}</div>
           <NavLink to={"category"}>View All</NavLink>
         </div>
         <div className="row">
-          {popularCars.map((car) => {
+          {cars.map((car) => {
+            if(title === "Popular Car"){
+              return (
+                <div className="col-3" key={car.id}>
+                  <NavLink to={car.id}>
+                    <CardBox car={car} />
+                  </NavLink>
+                </div>
+              );
+            }
             return (
-              <div className="col-3" key={car.id}>
-                <CardBox car={car} />
+              <div className="col-4" key={car.id}>
+                <NavLink to={car.id}>
+                  <CardBox car={car} />
+                </NavLink>
               </div>
             );
           })}
         </div>
-      </div>
+      </>
     );
   } else {
     return (

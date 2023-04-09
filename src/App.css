@@ -83,10 +83,11 @@ li{
   width: 20px;
   height: 20px;
   background: #3563E9!important;
-  border: solid 4px #fff!Important;
+  border: solid 4px #fff!important;
 }
 .range-slider .range-slider__range {
   background: #3563E9!important;
+  left: 0.69492%!important;
 }
 .range-slider .range-slider__thumb[data-disabled] {
   display: none!important;

@@ -7,21 +7,21 @@ const CarBoxHolder = ({ cars, title }) => {
     return (
         <>
         <div className="d-flex justify-content-between align-items-center mt-5 mb-3 ms-3">
-          <span className="text-mute">{title}</span>
+          <div className="text-mute">{title}</div>
         </div>
         <div className="row">
           {title === ""
             ? cars.map((car) => {
                 return (
                   <div className="col-xl-4 col-sm-6" key={car.id}>
-                    <CardBox car={car} />
+                    <NavLink to={car.id}><CardBox car={car} /></NavLink>
                   </div>
                 );
               })
             : cars.map((car) => {
                 return (
                   <div className="col-xl-3 col-md-4 col-sm-6" key={car.id}>
-                    <CardBox car={car} />
+                    <NavLink to={car.id}><CardBox car={car} /></NavLink>
                   </div>
                 );
               })}

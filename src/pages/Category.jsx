@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import CarBoxHolder from "../components/carBoxHolder/CarBoxHolder";
 import FilterHolder from "../components/filterBox/FilterHolder";
+import { Outlet } from "react-router-dom";
 import SideBox from "../components/sideBox/SideBox";
 import carsFetch from "../redux/cars/carsActions";
 import { useEffect } from "react";
