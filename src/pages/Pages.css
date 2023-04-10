@@ -45,68 +45,182 @@
   border-radius: 10px;
   padding: 24px;
 }
-.card-details-title .title{
-    font-size: 32px;
-    color: #1A202C;
-    font-weight: bold;
+.card-details-title .title {
+  font-size: 32px;
+  color: #1a202c;
+  font-weight: bold;
 }
-.fill-star{
-    color: #FBAD39;
-    margin-right: 3px;
+.fill-star {
+  color: #fbad39;
+  margin-right: 3px;
 }
-.fill-star ,.empty-star{
+.fill-star,
+.empty-star {
   font-size: 15px;
 }
-.details-info{
-    line-height: 40px;
+.details-info {
+  line-height: 40px;
 }
-.details-price{
-    font-size: 28px;
-    color: #1A202C;
-    font-weight: bold;
+.details-price {
+  font-size: 28px;
+  color: #1a202c;
+  font-weight: bold;
 }
-.review-box{
+.review-box {
   background-color: #fff;
   width: 100%;
   border-radius: 10px;
   padding: 24px;
 }
-.review-title{
+.review-title {
   display: flex;
 }
-.review-title h2{
-  color: #1A202C  ;
+.review-title h2 {
+  color: #1a202c;
   font-size: 20px;
   font-weight: 600;
   margin-right: 15px;
 }
-.review-count{
+.review-count {
   width: 44px;
-height: 28px;
-background: #3563E9;
-border-radius: 4px;
-color: #fff;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 14px;
+  height: 28px;
+  background: #3563e9;
+  border-radius: 4px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
 }
-.profile-img{
+.profile-img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   margin-right: 16px;
 }
-.review-des{
+.review-des {
   line-height: 28px;
   font-weight: 400;
 }
-.details-feature{
+.details-feature {
   display: flex;
 }
-.feature-value{
+.feature-value {
   font-weight: bold;
-  color: #1A202C;
+  color: #1a202c;
+}
+.payment-box {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 24px;
+}
+.box-title-holder .title {
+  font-weight: 700;
+  font-size: 20px;
+  color: #1a202c;
+}
+.payment-box input {
+  border: none;
+  outline: none;
+  padding: 16px;
+  background: #f6f7f9;
+  border-radius: 10px;
+  font-family: "PlusJakartaSansMedium" !important;
+  font-size: 14px;
+}
+.payment-box input::placeholder {
+  color: #90a3bf;
+  font-size: 14px;
+  font-family: "PlusJakartaSansMedium" !important;
+}
+.payment-box label {
+  color: #1a202c;
+  font-weight: 500;
+}
+.payment-box .filter-selector {
+  padding: 16px;
+  background: #f6f7f9;
+  border-radius: 10px;
+}
+.filter-selector select {
+  border: none;
+  outline: none;
+  width: 100%;
+  background: none;
+  color: #90a3bf;
+  font-size: 14px;
+  font-family: "PlusJakartaSansMedium" !important;
+}
+.credit-box {
+  padding: 24px;
+  background: #f6f7f9;
+  border-radius: 10px;
+}
+.credit-box input {
+  background: #ffffff;
+  border-radius: 10px;
+}
+.pay-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid #90a3bf;
+}
+.credit-box .squar {
+  width: 20px;
+  height: 20px;
+}
+.payment-box .btn-blue {
+  border-radius: 10px !important;
+  display: inline-flex !important;
+  width: 140px !important;
+  height: 56px !important;
+  border: none;
+}
+.security-icon {
+  width: 30px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+.summery-img {
+  width: 150px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+.summery-profile {
+  padding: 32px 0;
+  border-bottom: solid 1px #c3d4e9;
+  margin-bottom: 32px;
+}
+.payment-box .title-summery {
+  font-weight: 700;
+  font-size: 32px;
+  color: #1a202c;
+}
+.offer {
+  background: #f6f7f9;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+.offer button {
+  border: none;
+  outline: none;
+  background: #f6f7f9;
+}
+.price-summery {
+  font-weight: 700;
+  font-size: 20px;
+  color: #1a202c;
+}
+.error{
+  font-size: 13px;
+  margin-top: 10px;
 }
 @media (max-width: 1300px) {
   .page-side .filter-box {
@@ -131,12 +245,29 @@ font-size: 14px;
   .details-feature {
     font-size: 12px;
     margin-bottom: 15px;
+  }
+  .page-side {
+    padding: 20px;
+  }
+  p {
+    font-size: 12px !important;
+  }
+  .payment-box .title-summery {
+    font-size: 20px;
+  }
+  .summery-img {
+    width: 130px;
+    height: 80px;
+  }
+  .payment-box label {
+    font-size: 12px;
+    width: calc(100% - 50px);
 }
-.page-side {
-  padding: 20px;
-}
-p{
-  font-size: 12px!important;
+.payment-box .btn-blue{
+  width: 100px!important;
+height: 36px!important;
+border-radius: 4px!important;
+font-size: 12px!important;
 }
 }
 @media (max-width: 400px) {
@@ -144,6 +275,4 @@ p{
     width: 90px;
     height: 65px;
   }
-  
 }
-

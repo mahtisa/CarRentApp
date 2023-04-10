@@ -34,7 +34,7 @@ function App() {
               <Route path=":carId" element={<DetailCar />} />
           </Route>
           </Route>
-          <Route path="payment" element={<Payment/>}/>
+          <Route path="payment/:carId" element={<Payment/>}/>
         </Routes>
         <Footer />
       </div>

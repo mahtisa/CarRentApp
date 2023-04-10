@@ -13,7 +13,7 @@ const Footer = () => {
                     </div>
                     <div className="col-md-6">
                         <div className="row">
-                            <div className="col-md-4">
+                            <div className="col-md-4 col-6 my-3">
                                 <div className="footer-title mb-4">About</div>
                                 <ul>
                                     <li><NavLink>How it workes</NavLink></li>
@@ -22,7 +22,7 @@ const Footer = () => {
                                     <li><NavLink>Business Relation</NavLink></li>
                                 </ul>
                             </div>
-                              <div className="col-md-4">
+                              <div className="col-md-4 col-6 my-3">
                                 <div className="footer-title mb-4">Community</div>
                                 <ul>
                                     <li><NavLink>Events</NavLink></li>
@@ -31,7 +31,7 @@ const Footer = () => {
                                     <li><NavLink>Invite a friend</NavLink></li>
                                 </ul>
                             </div>
-                            <div className="col-md-4">
+                            <div className="col-md-4 my-3">
                                 <div className="footer-title mb-4">Social</div>
                                 <ul>
                                     <li><NavLink>Discord</NavLink></li>
@@ -42,14 +42,18 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="row">
+                    <div className="col">
                     <div className="down-footer d-flex align-items-center justify-content-between">
-                        <p className="text-dark">©2022 MORENT. All rights reserved</p>
-                        <div className="footer-right">
+                        <div className="footer-right d-md-none d-flex justify-content-between w-100">
                             <NavLink className="text-dark me-5">Privacy & Policy</NavLink>
                             <NavLink className="text-dark">Terms & Condition</NavLink>
                         </div>
+                        <p className="text-dark">©2022 MORENT. All rights reserved</p>
+                        <div className="footer-right d-md-block d-none">
+                            <NavLink className="text-dark me-5">Privacy & Policy</NavLink>
+                            <NavLink className="text-dark">Terms & Condition</NavLink>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>

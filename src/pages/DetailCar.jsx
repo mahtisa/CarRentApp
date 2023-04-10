@@ -130,7 +130,7 @@ const DetailCar = () => {
                         {car.priceOff !== 0 ? `$${car.price}.00` : ""}
                       </div>
                     </div>
-                    <NavLink>
+                    <NavLink to={`/payment/${car.id}`}>
                       <div className="btn-blue">Rent Now</div>
                     </NavLink>
                   </div>
